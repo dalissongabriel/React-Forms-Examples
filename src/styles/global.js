@@ -31,12 +31,17 @@ export const GlobalStyle = createGlobalStyle`
     h1, h2, h3, h4, h5, h6, strong {
         font-weight: 600;
     }
-    button {
+    button, input[type=submit], input[type=reset] {
         cursor: pointer;
         border: none;
     }
     [disabled] {
         opacity: 0.6;
         cursor: not-allowed;
+    }
+    .error-message {
+      font-size: 1.1rem;
+      color: red;
+      font-style: italic;
     }
 `

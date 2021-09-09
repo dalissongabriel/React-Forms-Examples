@@ -14,7 +14,7 @@ export const Form = styled.form`
     font-size: 1.2rem;
     color: var(--textos);
   }
-  button {
+  input[type=reset] {
     margin-left: 1rem;
     width: 30%;
     background-color: var(--background);
