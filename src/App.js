@@ -1,18 +1,22 @@
 import React from 'react'
+import { useForm } from 'react-hook-form'
 import { Container } from './components/Container'
 import { Form } from './components/Form'
+
 import { GlobalStyle } from './styles/global'
 
 const App = () => {
+  const { register, handleSubmit } = useForm()
+  const onSubmit = data => console.log(data)
   return (
     <>
       <GlobalStyle />
       <Container>
         <h1>Formulário</h1>
-        <Form>
+        <Form noValidate onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor="name">Nome:</label>
           <input
-            name="name"
+            {...register('name')}
             id="name"
             type="text"
             required
@@ -20,7 +24,7 @@ const App = () => {
           />
           <label htmlFor="email">Email:</label>
           <input
-            name="email"
+            {...register('email')}
             id="email"
             type="email"
             required
