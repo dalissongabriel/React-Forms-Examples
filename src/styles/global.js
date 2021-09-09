@@ -5,6 +5,7 @@ export const GlobalStyle = createGlobalStyle`
         --background: #FFFFFF;
         --titulos: #ff5454;
         --textos: #1a2e35;
+        --shape-background: #f7f8f9;
     }
     * {
         margin: 0;
